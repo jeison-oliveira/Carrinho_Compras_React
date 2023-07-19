@@ -1,9 +1,9 @@
 const Navbar = (props) => {
-  const { carregarCarrinho } = props;
+  const { setPage } = props;
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="teste">
+        <a className="navbar-brand" href="#!" onClick={() => setPage("home")}>
           Loja Virtual
         </a>
         <button
@@ -22,17 +22,21 @@ const Navbar = (props) => {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="teste"
+                href="#!"
+                onClick={() => setPage("home")}
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                onClick={carregarCarrinho("home")}
               >
                 Produto
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="teste">
+                  <a
+                    className="dropdown-item"
+                    href="#!"
+                    onClick={() => setPage("home")}
+                  >
                     Cadastrar
                   </a>
                 </li>
@@ -40,7 +44,11 @@ const Navbar = (props) => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="teste">
+                  <a
+                    className="dropdown-item"
+                    href="#!"
+                    onClick={() => setPage("home")}
+                  >
                     Editar
                   </a>
                 </li>
@@ -48,19 +56,33 @@ const Navbar = (props) => {
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="teste">
+                  <a
+                    className="dropdown-item"
+                    href="#!"
+                    onClick={() => setPage("home")}
+                  >
                     Deletar
                   </a>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="teste">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="#!"
+                onClick={() => setPage("home")}
+              >
                 Login
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="teste">
+              <a
+                className="nav-link active"
+                aria-current="page"
+                href="#!"
+                onClick={() => setPage("home")}
+              >
                 Signup
               </a>
             </li>
@@ -68,8 +90,8 @@ const Navbar = (props) => {
               <a
                 className="nav-link active"
                 aria-current="page"
-                onClick={carregarCarrinho("shoppingcart")}
-                href="teste"
+                href="#!"
+                onClick={() => setPage("shoppingCart")}
               >
                 Carrinho
               </a>

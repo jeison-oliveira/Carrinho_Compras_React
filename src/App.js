@@ -6,15 +6,14 @@ class App extends Component {
     page: "home",
   };
 
-  carregarCarrinho = (pagina) => {
+  setPage = (page) => {
+    console.log(page);
     this.setState({
-      page: pagina,
+      page: page,
     });
   };
 
   render() {
-    const { page } = this.state;
-
     const produtos = [
       {
         name: "Pão de Queijo",
@@ -49,8 +48,8 @@ class App extends Component {
     ];
     return (
       <div className="container text-center">
-        <Navbar page={page} carregarCarrinho={this.carregarCarrinho} />
-        <Content page={page} produtos={produtos} />
+        <Navbar setPage={this.setPage} />
+        <Content page={this.state.page} produtos={produtos} />
       </div>
     );
   }
