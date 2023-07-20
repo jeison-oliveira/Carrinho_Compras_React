@@ -2,8 +2,8 @@ import App from "./App";
 // import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-// import "bootstrap/dist/css/bootstrap.css";
-import "../public/scss/main.scss";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 

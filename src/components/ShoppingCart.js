@@ -1,5 +1,5 @@
 const ShoppingCart = (props) => {
-  const { cartProducts } = props;
+  const { cartProducts, removeFromCart } = props;
   const cards = cartProducts.map((produto, index) => {
     return (
       <div className="card rounded-3 mb-4">
@@ -9,29 +9,25 @@ const ShoppingCart = (props) => {
               <img
                 src={produto.url}
                 className="img-fluid rounded-3"
-                alt="Cotton T-shirt"
+                alt={produto.name}
               />
             </div>
             <div className="col-md-3 col-lg-3 col-xl-3">
               <p className="lead fw-normal mb-2">{produto.name}</p>
-              <p>
-                <span className="text-muted">Size: </span>M{" "}
-                <span className="text-muted">Color: </span>Grey
-              </p>
             </div>
             <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
               <button
                 className="btn btn-link px-2"
                 onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
               >
-                <i className="fas fa-minus"></i>
+                <i className="bi bi-dash-circle-fill"></i>
               </button>
 
               <input
                 id="form1"
                 min="0"
                 name="quantity"
-                defaultValue="2"
+                defaultValue="1"
                 type="number"
                 className="form-control form-control-sm"
               />
@@ -40,15 +36,15 @@ const ShoppingCart = (props) => {
                 className="btn btn-link px-2"
                 onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
               >
-                <i className="fas fa-plus"></i>
+                <i class="bi bi-plus-circle-fill"></i>
               </button>
             </div>
             <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
               <h5 className="mb-0">{produto.price}</h5>
             </div>
             <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-              <a href="#!" className="text-danger">
-                <i className="fas fa-trash fa-lg"></i>
+              <a href="#!" className="text-danger" onClick={()=>removeFromCart(index)}>
+                <i class="bi bi-trash-fill"></i>
               </a>
             </div>
           </div>
