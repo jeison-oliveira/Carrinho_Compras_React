@@ -4,12 +4,30 @@ import Content from "./components/Content";
 class App extends Component {
   state = {
     page: "home",
+    cartProducts: [],
   };
 
   setPage = (page) => {
     console.log(page);
     this.setState({
       page: page,
+    });
+  };
+
+  addToCart = (produto) => {
+    const { cartProducts } = this.state;
+    console.log("Produto adicionado ao carrinho ", produto);
+    this.setState({
+      cartProducts: [...cartProducts, produto],
+    });
+  };
+
+  removeFromCart = (index) => {
+    const { cartProducts } = this.state;
+    this.setState({
+      cartProducts: cartProducts.filter((produto, i) => {
+        return i !== index;
+      }),
     });
   };
 
@@ -49,7 +67,13 @@ class App extends Component {
     return (
       <div className="container text-center">
         <Navbar setPage={this.setPage} />
-        <Content page={this.state.page} produtos={produtos} />
+        <Content
+          page={this.state.page}
+          produtos={produtos}
+          addToCart={this.addToCart}
+          removeFromCart={this.removeFromCart}
+          cartProducts={this.state.cartProducts}
+        />
       </div>
     );
   }
