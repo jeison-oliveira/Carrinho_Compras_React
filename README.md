@@ -22,29 +22,29 @@ Crie um Componente de Carrinho de compras onde os produto também são adicionad
 
 # Vídeo Explicativo
 
-- [Loom](https://www.loom.com/embed/35bef44e67024d848a8a4b1573f15d10?sid=14f1ba46-0532-4f20-9fc6-7cd0cc086e95)
+- [Loom](https://www.loom.com)
 
 # Relatório dos Commits
 
-### Initial commit (e1762159549cfb6cd67ad1e0adbcb38fcf7842ba)
+### Initial commit (092a8c0f0c25074d7375080d3b82e4bb0185e3c2)
 
-Primeiro commit, após a criação do repositório Git, que adiciona o arquivo README.md
+Primeiro commit, após a criação do repositório Git.
 
-### Portado o código do my-app para o exercício de fixação (52be83f3a1c45fd7ff0cbe6de826b9001e29a75a)
+### Iniciando a implementação (289d831cd18e2591b53af45c82eccc1e4a77e721)
 
-Commit onde o código do projeto my-app, utilizado como exemplo em sala de aula, foi adicionado ao repositório para posterior modificação e adequação.
+Adição do código do projeto [navbar_Card_React](https://github.com/jeison-oliveira/navBar_Card_React), da atividade anterior, para posterior modificação e adequação.
 
-### Componente Navbar criado (dd8c389411d5fbb47b2706f623cc8c5b7e25bfd2)
+### Listando o carrinho (d3110cdbe757da605c5fc8dee6b8c4114de6543fe)
 
-Commit realizado após a adição do código responsável pela criação do componente **Navbar** do Bootstrap.
+Commit realizado após a conclusão do código que permite listar o carrinho foi finalizado.
 
-### Iniciando o desenvolvimento do Card (676afc9e414e58bb4cf5b9c2757652c0caaafdd2)
+### Adição de função add e remover produto do carrinho (9d0bba5ecdf7b99e8af4395a4418d5c94490e982)
 
-Commit realizado após o início da atividade de adição do código responsável pela criação do componente **Card** do Bootstrap.
+Commit realizado após a conclusão das funções que permitem remover e adicionar um produto do carrinho.
 
-### Finalização dos Cards (42c3ac407b5e43212a296e4f909ba02238d173b2)
+### Finalizando a implementação do Carrinho de Compras(42c3ac407b5e43212a296e4f909ba02238d173b2)
 
-Commit realizado após o fim da atividade de adição do código responsável pela criação do componente **Card** do Bootstrap.
+Commit realizado após a conclusão das da implementação total da atividade.
 
 ### Adicionando o relatório e outras instruções no README.md
 
@@ -63,13 +63,13 @@ Você precisa ter o Node.js e o npm instalados em sua máquina. Este projeto foi
 - Clone o repositório:
 
 ```sh
-git clone https://github.com/jeison-oliveira/navBar_Card_React.git
+git clone https://github.com/jeison-oliveira/Carrinho_Compras_React.git
 ```
 
 - Navegue até o diretório do projeto:
 
 ```sh
-cd navBar_Card_React
+cd Carrinho_Compras_React
 ```
 
 - Instale as dependências do projeto:
@@ -92,8 +92,9 @@ Isso iniciará o compilador react-scripts e abrirá automaticamente uma tela do 
 
 - **Node.js** - Ambiente de execução JavaScript
 - **React** - Framework frontend de aplicação web
+- **Bootstrap** - Framework frontend de aplicação web
 
-## Autor
+# Autor
 
 - [@jeison-oliveira](https://github.com/jeison-oliveira)
 
