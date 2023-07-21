@@ -1,4 +1,4 @@
-# Projeto navBar_Card_React
+# Projeto Carrinho_Compras_React
 
 Repositório Github da atividade avaliativa da disciplina React do curso WebAcademy UFAM.
 

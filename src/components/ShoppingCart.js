@@ -1,57 +1,85 @@
 const ShoppingCart = (props) => {
   const { cartProducts, removeFromCart } = props;
-  const cards = cartProducts.map((produto, index) => {
-    return (
-      <div className="card rounded-3 mb-4">
-        <div className="card-body p-4">
-          <div className="row d-flex justify-content-between align-items-center">
-            <div className="col-md-2 col-lg-2 col-xl-2">
-              <img
-                src={produto.url}
-                className="img-fluid rounded-3"
-                alt={produto.name}
-              />
-            </div>
-            <div className="col-md-3 col-lg-3 col-xl-3">
-              <p className="lead fw-normal mb-2">{produto.name}</p>
-            </div>
-            <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-              <button
-                className="btn btn-link px-2"
-                onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-              >
-                <i className="bi bi-dash-circle-fill"></i>
-              </button>
+  // let cards = (
+  //   <div className="card rounded-3 mb-4">
+  //     <div className="card-body p-4">
+  //       <div className="row d-flex justify-content-between align-items-center">
+  //         <div className="col-md-12 col-lg-2 col-xl-2">
+  //           <p>Seu carrinho está vazio.</p>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
+  let cards = (
+    <div className="card rounded-3 mb-4">
+      <div className="card-body p-4">
+        <div className="row d-flex justify-content-between align-items-center">
+          <div className="col-md col-lg col-xl">Seu carrinho está vazio</div>
+        </div>
+      </div>
+    </div>
+  );
+  console.log(cartProducts);
+  if (cartProducts.length !== 0) {
+    console.log("entrou aqui");
+    cards = cartProducts.map((produto, index) => {
+      return (
+        <div className="card rounded-3 mb-4">
+          <div className="card-body p-4">
+            <div className="row d-flex justify-content-between align-items-center">
+              <div className="col-md-2 col-lg-2 col-xl-2">
+                <img
+                  src={produto.url}
+                  className="img-fluid rounded-3"
+                  alt={produto.name}
+                />
+              </div>
+              <div className="col-md-3 col-lg-3 col-xl-3">
+                <p className="lead fw-normal mb-2">{produto.name}</p>
+              </div>
+              <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+                <button
+                  className="btn btn-link px-2"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                >
+                  <i className="bi bi-dash-circle-fill"></i>
+                </button>
 
-              <input
-                id="form1"
-                min="0"
-                name="quantity"
-                defaultValue="1"
-                type="number"
-                className="form-control form-control-sm"
-              />
+                <input
+                  id="form1"
+                  min="0"
+                  name="quantity"
+                  defaultValue="1"
+                  type="number"
+                  className="form-control form-control-sm"
+                />
 
-              <button
-                className="btn btn-link px-2"
-                onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-              >
-                <i class="bi bi-plus-circle-fill"></i>
-              </button>
-            </div>
-            <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-              <h5 className="mb-0">{produto.price}</h5>
-            </div>
-            <div className="col-md-1 col-lg-1 col-xl-1 text-end">
-              <a href="#!" className="text-danger" onClick={()=>removeFromCart(index)}>
-                <i class="bi bi-trash-fill"></i>
-              </a>
+                <button
+                  className="btn btn-link px-2"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                >
+                  <i class="bi bi-plus-circle-fill"></i>
+                </button>
+              </div>
+              <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                <h5 className="mb-0">{produto.price}</h5>
+              </div>
+              <div className="col-md-1 col-lg-1 col-xl-1 text-end">
+                <a
+                  href="#!"
+                  className="text-danger"
+                  onClick={() => removeFromCart(index)}
+                >
+                  <i class="bi bi-trash-fill"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
-  });
+      );
+    });
+  }
 
   return (
     <section className="h-100" style={{ backgroundColor: "#eee" }}>
