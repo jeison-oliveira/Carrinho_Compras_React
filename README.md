@@ -42,13 +42,19 @@ Commit realizado após a conclusão do código que permite listar o carrinho foi
 
 Commit realizado após a conclusão das funções que permitem remover e adicionar um produto do carrinho.
 
-### Finalizando a implementação do Carrinho de Compras(42c3ac407b5e43212a296e4f909ba02238d173b2)
+### Adição de CSS (3193c324e53e13f6330f908b98891f3e845c97d0)
+
+Tentativa de adicionar os ícones do FontAwesome, mas sem sucesso. Mais tarde foi adicionado o suporte aos ícones do Bootstrap.
+
+### Finalizando a implementação do Carrinho de Compras (42c3ac407b5e43212a296e4f909ba02238d173b2)
 
 Commit realizado após a conclusão das da implementação total da atividade.
 
-### Adicionando o relatório e outras instruções no README.md
+### Adicionando o relatório e outras instruções no README.md (fd6b26aec8756cbb2f46784fcc37555d86d64743)
 
 Commits realizados após o fim da atividade de criação do relatório em formato de README.md.
+
+### Adicionando mensagem de carrinho vazio (866ac79f04fa30c7a4d6b0da22772e7525543c89)
 
 # Começando
 
