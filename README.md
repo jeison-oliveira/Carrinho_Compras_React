@@ -22,7 +22,7 @@ Crie um Componente de Carrinho de compras onde os produto também são adicionad
 
 # Vídeo Explicativo
 
-- [Loom](https://www.loom.com/share/4bdad93824ed4826b7816cbe5c8bc7b2?sid=9f8d1d9a-4114-4e96-91b3-f8af80576807m)
+- [Loom](https://www.loom.com/embed/4bdad93824ed4826b7816cbe5c8bc7b2?sid=faa59d4d-a26e-4d6e-a23f-dbd2fe880f01)
 
 # Relatório dos Commits
 
